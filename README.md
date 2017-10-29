@@ -56,3 +56,8 @@ Where this concept and structure becomes very useful, is when sharing business l
 When some functionality specific to a platfrom is required, it can usually just be split into a `.native.js` file for the native functionality.
 
 A new repo, extending this one will provide a a boilerplate project using this approach together with Redux. _Still work in progress._
+
+## Contribution
+Your contibution is of course welcome. Simply create a pull request with a good description and I'll review it as soon as I can.
+
+Feel free to report any issues.
