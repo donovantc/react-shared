@@ -15,13 +15,13 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(js|jsx)$/,
+            test: /\.(js|jsx|web.js)$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
         }]
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.web.js']
     },
     plugins: [HtmlWebpackPluginConfig],
     devServer: {

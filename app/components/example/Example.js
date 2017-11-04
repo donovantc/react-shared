@@ -14,7 +14,7 @@ export default class Example extends PureComponent{
     onSubmit = (name) => {
         let stateValue
 
-        if (name && name.length < 2)
+        if (!name || name.length < 2)
             stateValue = { name: null, error: 'Name should be at least 2 characters'}
         else
             stateValue = { name, error: null }
