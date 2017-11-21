@@ -40,7 +40,7 @@ The basic principle is that the file extensions, in combination with webpack and
 
 `.js` files are interpreted by both web and native builds and are used to share common functionality
 
-`.jsx` files are interpreted by only web builds and are used to render only web specific content
+`.jsx` or `.web.js` files are interpreted by only web builds and are used to render only web specific content
 
 `.native.js` files are interpreted by only native builds (iOS and android) and are used to render only native specific content.
 
