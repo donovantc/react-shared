@@ -360,6 +360,21 @@ module.exports = invariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -453,7 +468,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -477,7 +492,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -546,21 +561,6 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(16);
-} else {
-  module.exports = __webpack_require__(17);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -576,7 +576,7 @@ if (process.env.NODE_ENV === 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(2);
-  var warning = __webpack_require__(5);
+  var warning = __webpack_require__(6);
   var ReactPropTypesSecret = __webpack_require__(8);
   var loggedTypeFailures = {};
 }
@@ -957,7 +957,7 @@ module.exports = getActiveElement;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-var _jsxFileName='/Users/donovan/Projects/reactshared/app/index.native.js';var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(18);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reactDom.render)(_react2.default.createElement('h1',{__source:{fileName:_jsxFileName,lineNumber:5}},'Hello World!'),document.getElementById('app'));
+var _jsxFileName='/Users/donovan/Projects/reactshared/app/index.jsx';var _react=__webpack_require__(3);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(18);var _App=__webpack_require__(32);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}(0,_reactDom.render)(_react2.default.createElement(_App.App,{__source:{fileName:_jsxFileName,lineNumber:6}}),document.getElementById('app'));
 
 /***/ }),
 /* 16 */
@@ -973,7 +973,7 @@ var _jsxFileName='/Users/donovan/Projects/reactshared/app/index.native.js';var _
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(3),p=__webpack_require__(4);__webpack_require__(2);var r=__webpack_require__(1);
+var f=__webpack_require__(4),p=__webpack_require__(5);__webpack_require__(2);var r=__webpack_require__(1);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -1010,9 +1010,9 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var objectAssign$1 = __webpack_require__(3);
-var require$$0 = __webpack_require__(5);
-var emptyObject = __webpack_require__(4);
+var objectAssign$1 = __webpack_require__(4);
+var require$$0 = __webpack_require__(6);
+var emptyObject = __webpack_require__(5);
 var invariant = __webpack_require__(2);
 var emptyFunction = __webpack_require__(1);
 var checkPropTypes = __webpack_require__(7);
@@ -2756,7 +2756,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(6);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(3),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(4),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
+var aa=__webpack_require__(3);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3081,18 +3081,18 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var react = __webpack_require__(6);
+var react = __webpack_require__(3);
 var invariant = __webpack_require__(2);
 var ExecutionEnvironment = __webpack_require__(9);
-var _assign = __webpack_require__(3);
+var _assign = __webpack_require__(4);
 var EventListener = __webpack_require__(10);
-var require$$0 = __webpack_require__(5);
+var require$$0 = __webpack_require__(6);
 var hyphenateStyleName = __webpack_require__(23);
 var emptyFunction = __webpack_require__(1);
 var camelizeStyleName = __webpack_require__(25);
 var performanceNow = __webpack_require__(27);
 var propTypes = __webpack_require__(29);
-var emptyObject = __webpack_require__(4);
+var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(7);
 var shallowEqual = __webpack_require__(11);
 var containsNode = __webpack_require__(12);
@@ -20559,8 +20559,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 var emptyFunction = __webpack_require__(1);
 var invariant = __webpack_require__(2);
-var warning = __webpack_require__(5);
-var assign = __webpack_require__(3);
+var warning = __webpack_require__(6);
+var assign = __webpack_require__(4);
 
 var ReactPropTypesSecret = __webpack_require__(8);
 var checkPropTypes = __webpack_require__(7);
@@ -21157,6 +21157,27 @@ module.exports = function() {
   return ReactPropTypes;
 };
 
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:true});exports.App=undefined;var _jsxFileName='/Users/donovan/Projects/reactshared/app/App.web.js';var _react=__webpack_require__(3);var _react2=_interopRequireDefault(_react);var _Example=__webpack_require__(33);var _Example2=_interopRequireDefault(_Example);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var App=exports.App=function App(props){return _react2.default.createElement('div',{__source:{fileName:_jsxFileName,lineNumber:7}},_react2.default.createElement('h1',{__source:{fileName:_jsxFileName,lineNumber:8}},'This is the React Web App'),_react2.default.createElement(_Example2.default,{__source:{fileName:_jsxFileName,lineNumber:9}}));};
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='/Users/donovan/Projects/reactshared/app/components/example/Example.js';var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(3);var _react2=_interopRequireDefault(_react);var _Render=__webpack_require__(34);var _Render2=_interopRequireDefault(_Render);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Example=function(_PureComponent){_inherits(Example,_PureComponent);function Example(){_classCallCheck(this,Example);var _this=_possibleConstructorReturn(this,(Example.__proto__||Object.getPrototypeOf(Example)).call(this));_this.onSubmit=function(name){var stateValue=void 0;if(!name||name.length<2)stateValue={name:null,error:'Name should be at least 2 characters'};else stateValue={name:name,error:null};_this.setState(function(){return _extends({},stateValue);});};_this.state={name:null,error:null};return _this;}_createClass(Example,[{key:'render',value:function render(){return _react2.default.createElement(_Render2.default,_extends({},this.props,this.state,{onSubmit:this.onSubmit,__source:{fileName:_jsxFileName,lineNumber:27}}));}}]);return Example;}(_react.PureComponent);exports.default=Example;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='/Users/donovan/Projects/reactshared/app/components/example/Render.web.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(3);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Render=function(_PureComponent){_inherits(Render,_PureComponent);function Render(){_classCallCheck(this,Render);var _this=_possibleConstructorReturn(this,(Render.__proto__||Object.getPrototypeOf(Render)).call(this));_this.onChange=function(event){var inputValue=event.target.value;_this.setState(function(){return{inputValue:inputValue};});};_this.state={inputValue:''};return _this;}_createClass(Render,[{key:'render',value:function render(){var inputValue=this.state.inputValue;var _props=this.props,onSubmit=_props.onSubmit,name=_props.name,error=_props.error;return _react2.default.createElement('div',{__source:{fileName:_jsxFileName,lineNumber:22}},name&&'Welcome '+name,'What is your name?',_react2.default.createElement('input',{onChange:this.onChange,value:inputValue,__source:{fileName:_jsxFileName,lineNumber:25}}),_react2.default.createElement('button',{onClick:function onClick(){return onSubmit(inputValue);},__source:{fileName:_jsxFileName,lineNumber:26}},'Submit'),error);}}]);return Render;}(_react.PureComponent);exports.default=Render;
 
 /***/ })
 /******/ ]);
