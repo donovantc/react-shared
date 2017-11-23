@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test:native": "jest --config \"./config/native/jest.config.js\"",
+    "test:web": "jest --config \"./config/web/jest.config.js\"",
     "web": "webpack-dev-server --config \"./config/web/webpack.config.js\"",
     "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "stats": "webpack --config \"./config/web/webpack.config.js\" --json > stats.json"
   },
   "dependencies": {
     "html-webpack-plugin": "^2.30.1",
@@ -26,8 +28,5 @@
     "react-test-renderer": "16.0.0-beta.5",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }
