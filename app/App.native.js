@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import Example from './components/example/Example'
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
