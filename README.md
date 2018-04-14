@@ -1,5 +1,5 @@
 # react-shared
-[![Build Status](https://travis-ci.org/donovantc/react-shared.svg?branch=master)](https://travis-ci.org/donovantc/react-shared)
+[![Build Status](https://travis-ci.org/donovantc/react-shared.svg?branch=master)](https://travis-ci.org/donovantc/react-shared) [![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 A React and React Native project all in one.
 This is a very basic setup which includes the minimum (or near minimum) required to have a React web app and a React Native (iOS and Android) app in one project.
