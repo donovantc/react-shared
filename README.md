@@ -1,4 +1,6 @@
 # react-shared
+[![Build Status](https://travis-ci.org/donovantc/react-shared.svg?branch=master)](https://travis-ci.org/donovantc/react-shared)
+
 A React and React Native project all in one.
 This is a very basic setup which includes the minimum (or near minimum) required to have a React web app and a React Native (iOS and Android) app in one project.
 
@@ -50,7 +52,30 @@ One thing to keep in mind is that any librarires/frameworks/sdks that are instal
 
 For example, using `View` from `react-native` inside a `.js` file will not work if this `.js` file is imported into any of the files used by the web app.
 
+## Testing
+
+This project includes the configuration for Jest snapshot testing on web and native platforms. Tests are included in the `__tests__` directory of their associated component. Test files for web need to have the file extensions `.test.web.js` and for native `.test.native.js.`
+
+To run tests, simply execute:
+
+```
+yarn test
+```
+
+To run tests for web only, execute:
+
+```
+yarn run test:web
+```
+
+To run tests for native only, execute:
+
+```
+yarn run test:native
+```
+
 ## Future work
+
 Where this concept and structure becomes very useful, is when sharing business logic inside the application with Redux. It implies that, to a very large extent, a lot of the Redux Actions / Reducers / Middlewares can be shared between all platforms. 
 
 When some functionality specific to a platfrom is required, it can usually just be split into a `.native.js` file for the native functionality.
