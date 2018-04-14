@@ -1,25 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "stretch",
-      "backgroundColor": "#F5FCFF",
-      "flex": 1,
-      "justifyContent": "center",
-      "padding": 20,
+<div>
+  <h1
+    style={
+      Object {
+        "textAlign": "center",
+      }
     }
-  }
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
   >
-    This is the React Native App
-  </Text>
+    This is the React Web App
+  </h1>
   <View
     style={
       Object {
@@ -31,7 +22,6 @@ exports[`renders correctly 1`] = `
     <Text
       accessible={true}
       allowFontScaling={true}
-      disabled={false}
       ellipsizeMode="tail"
       style={
         Object {
@@ -44,6 +34,7 @@ exports[`renders correctly 1`] = `
       What is your name?
     </Text>
     <TextInput
+      allowFontScaling={true}
       onChangeText={[Function]}
       style={
         Object {
@@ -61,6 +52,7 @@ exports[`renders correctly 1`] = `
       accessibilityTraits={undefined}
       accessible={true}
       collapsable={undefined}
+      hasTVPreferredFocus={undefined}
       hitSlop={undefined}
       isTVSelectable={true}
       nativeID={undefined}
@@ -88,7 +80,6 @@ exports[`renders correctly 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
-        disabled={false}
         ellipsizeMode="tail"
         style={
           Object {
@@ -102,5 +93,5 @@ exports[`renders correctly 1`] = `
       </Text>
     </View>
   </View>
-</View>
+</div>
 `;

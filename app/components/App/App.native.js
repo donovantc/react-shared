@@ -4,25 +4,22 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Platform,
-} from 'react-native';
-import Example from './components/example/Example'
+import React, { Component } from 'react'
+import { StyleSheet, Text, View, Platform } from 'react-native'
+import Example from '../Example'
 
-export default class App extends Component {
-  render() {
+class App extends Component {
+  render () {
     return (
       <View style={styles.container}>
         <Text>This is the React Native App</Text>
         <Example />
       </View>
-    );
+    )
   }
 }
+
+export { App }
 
 const styles = StyleSheet.create({
   container: {
@@ -30,7 +27,6 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: 'center',
     alignItems: 'stretch',
-    backgroundColor: '#F5FCFF',
-
-  },
-});
+    backgroundColor: '#F5FCFF'
+  }
+})

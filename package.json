@@ -6,6 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test:native": "jest --config \"./config/native/jest.config.js\"",
     "test:web": "jest --config \"./config/web/jest.config.js\"",
+    "test": "yarn run test:web && yarn run test:native",
     "web": "webpack-dev-server --config \"./config/web/webpack.config.js\"",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
@@ -25,7 +26,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-native": "4.0.0",
     "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-beta.5",
+    "react-test-renderer": "^16.3.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   }
