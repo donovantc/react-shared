@@ -1,10 +1,8 @@
 import React from 'react'
+import { shallow } from 'enzyme';
 import Example from '../'
 
-import renderer from 'react-test-renderer'
-
 it('renders correctly', () => {
-  const tree = renderer.create(<Example />).toJSON()
-
+  const tree = shallow(<Example />);
   expect(tree).toMatchSnapshot()
 })

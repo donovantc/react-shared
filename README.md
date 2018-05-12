@@ -52,9 +52,35 @@ One thing to keep in mind is that any librarires/frameworks/sdks that are instal
 
 For example, using `View` from `react-native` inside a `.js` file will not work if this `.js` file is imported into any of the files used by the web app.
 
+## Add new components
+
+Adding new components according this structure is simple.
+
+```
+yarn run component [path/componentName]
+```
+
+Example:
+```
+yarn run component app/components/Example2
+```
+
+This will create a directory inside of app/components, with the following structure:
+```sh
+Example2
+├── __tests__
+    ├── Example2.test.native.js  
+    ├── Example2.test.web.js  
+├── index.js
+├── Example2.web.js
+├── Example2.native.js
+```
+
+This is achieved due to [this library](https://github.com/donovantc/create-react-component-folder/blob/master/README.md) which is a fork of [create-react-component-folder](https://github.com/snaerth/create-react-component-folder) adapted for the needs of react-shared.
+
 ## Testing
 
-This project includes the configuration for Jest snapshot testing on web and native platforms. Tests are included in the `__tests__` directory of their associated component. Test files for web need to have the file extensions `.test.web.js` and for native `.test.native.js.`
+This project includes the configuration for [enyzme](http://airbnb.io/enzyme/) and [Jest](https://facebook.github.io/jest/en/) snapshot testing on web and native platforms. Tests are included in the `__tests__` directory of their associated component. Test files for web need to have the file extensions `.test.web.js` and for native `.test.native.js.`
 
 To run tests, simply execute:
 
@@ -76,11 +102,11 @@ yarn run test:native
 
 ## Future work
 
-Where this concept and structure becomes very useful, is when sharing business logic inside the application with Redux. It implies that, to a very large extent, a lot of the Redux Actions / Reducers / Middlewares can be shared between all platforms. 
+Where this concept and structure becomes very useful, is when sharing business logic inside the application with one of the many application state management approaches (e.g. Redux, mobx). Taking Redux, for example, to a very large extent, a lot of the Redux Actions / Reducers / Middlewares can be shared between all platforms. I purposely left this implementation out so since so that each user can apply their own application state management.
 
 When some functionality specific to a platfrom is required, it can usually just be split into a `.native.js` file for the native functionality.
 
-A new repo, extending this one will provide a a boilerplate project using this approach together with Redux. _Still work in progress._
+However, I would like to create a project generator which will create a new project based on this structure.
 
 ## Contribution
 Your contibution is of course welcome. Simply create a pull request with a good description and I'll review it as soon as I can.

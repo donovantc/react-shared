@@ -7,13 +7,15 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, Platform } from 'react-native'
 import Example from '../Example'
+import Example2 from '../Example2'
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <View style={styles.container}>
         <Text>This is the React Native App</Text>
         <Example />
+        <Example2 />
       </View>
     )
   }
